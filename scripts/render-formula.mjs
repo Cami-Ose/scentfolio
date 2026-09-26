@@ -256,6 +256,12 @@ export function renderFormulaHTML(f) {
   const donut = donutSVG(f);
   const fam = famBlock(f);
   const date = (f.created_at ?? '').slice(0, 10);
+  /* 香精（基）浓度：2026-09-27 补问——原始 prompt（data/pmt-source.txt 第 8 行）里有
+     「香精（基）浓度：」，搬进代码时漏掉了，是 Cami 自己发现的。自由填 5~100，写进左页答句。
+     老档案没有这个字段，容得下：取不到就整句不渲染，旧手帐照常打开。 */
+  const conc = Number(f.concentration);
+  const concText = Number.isFinite(conc) && conc >= 5 && conc <= 100
+    ? `香精（基）浓度 ${conc}%。` : '';
   const stamps = f.questionnaire.accords.map((a, i) =>
     `<span class="stamp" style="--sr:${(((h >> (i * 3)) % 90) - 45) / 14}deg">${esc(a)}</span>`).join('');
 
@@ -292,7 +298,7 @@ ${DEFS}
           <div class="parfumeur">调香师 · ${esc(f.artist)}</div>
           ${f.mood_words?.length ? `<p class="anno anno-mood">「${esc(f.mood_words.join(' '))}」</p>` : ''}
         </div>
-        <div class="question-copy">问：此香以何气味为本？ 答：<b>${f.questionnaire.accords.map(esc).join('、')}</b>，取向<b>${esc(f.questionnaire.orientation)}</b>。三层之重量分配为 前 ${f.layers.top.weight}% · 中 ${f.layers.heart.weight}% · 后 ${f.layers.base.weight}%。</div>
+        <div class="question-copy">问：此香以何气味为本？ 答：<b>${f.questionnaire.accords.map(esc).join('、')}</b>，取向<b>${esc(f.questionnaire.orientation)}</b>。三层之重量分配为 前 ${f.layers.top.weight}% · 中 ${f.layers.heart.weight}% · 后 ${f.layers.base.weight}%。${concText}</div>
         <div class="fam-block">
           <h5>香族构成 <em>Composition des Familles</em></h5>${h4Orn}
           <div class="fam-bar">${fam.bar}</div>

@@ -1,6 +1,6 @@
 {
   "name": "scentfolio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AI agent 以「自身的气味」为题作答问卷，从 187 味真实香料中调香，经 MCP 工具产出一页自包含的单文件 HTML 手帐",
   "type": "module",
   "main": "server.mjs",

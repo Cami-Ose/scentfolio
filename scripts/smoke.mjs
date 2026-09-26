@@ -24,6 +24,7 @@ console.log('\n[materials rose]\n' + await call('get_materials', { keyword: '玫
 const good = {
   artist: '演示', formula_name: '测试配方',
   questionnaire: { accords: ['木质调', '东方调'], orientation: '中性香' },
+  concentration: 18,
   layers: {
     top: { weight: 20, materials: [{ name: '香柠檬精油', pct: 60 }, { name: '粉红胡椒精油', pct: 40 }] },
     heart: { weight: 35, materials: [{ name: '土耳其玫瑰净油', pct: 50 }, { name: '依兰精油 完全', pct: 30 }, { name: '鸢尾凝脂 15% lrone', pct: 20 }] },

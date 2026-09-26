@@ -27,6 +27,7 @@ const QUESTIONNAIRE_TEXT =
 1. 香调 —— 最多可选择三种；选择「无」时将不可选择其他香调。
    可选：${ACCORDS.join(' | ')}
 2. 香味取向：${ORIENTATIONS.join(' | ')}
+3. 香精（基）浓度 —— 自由填，5~100 的整数，指香精基占整瓶的百分比。
 然后请从原料库中挑选原料，交出前调 / 中调 / 后调三层配方（各层内百分比合计 100%，
 并给出三层各自的重量分配 weight，合计 100%），附一段这支香的气味说明书。`;
 
@@ -44,6 +45,9 @@ function validateFormula(body) {
   if (acc.includes('无') && acc.length > 1) errors.push('选择「无」时不可再选其他香调');
   for (const a of acc) if (!ACCORDS.includes(a)) errors.push(`未知香调：${a}`);
   if (!ORIENTATIONS.includes(questionnaire.orientation)) errors.push('香味取向必须是 男香/中性香/女香');
+  const conc = body.concentration;
+  if (typeof conc !== 'number' || !Number.isFinite(conc) || conc < 5 || conc > 100)
+    errors.push(`香精（基）浓度必须是 5~100 的数字（收到：${String(conc)}）`);
 
   for (const [layerKey, cn] of [['top', '前调'], ['heart', '中调'], ['base', '后调']]) {
     const L = layers[layerKey];
@@ -106,9 +110,10 @@ function fmtLocal(d) {
  * @param {object} opts
  * @param {string|null} opts.baseUrl 公开基址（如 https://example.com/mcp/scentfolio）。
  *   给了就走「只存 JSON + 返回在线 URL」；不给（本地 stdio）就落地 HTML 并返回文件路径。
+ * @param {object|null} opts.stats 计数器（线上模式才有），记成功/失败调香次数
  */
-export function buildServer({ baseUrl = null, formulasDir = FORMULAS_DIR } = {}) {
-  const server = new McpServer({ name: 'scentfolio', version: '0.2.0' });
+export function buildServer({ baseUrl = null, formulasDir = FORMULAS_DIR, stats = null } = {}) {
+  const server = new McpServer({ name: 'scentfolio', version: '0.3.0' });
 
   server.registerTool('get_questionnaire', {
     title: '获取调香问卷',
@@ -160,13 +165,17 @@ export function buildServer({ baseUrl = null, formulasDir = FORMULAS_DIR } = {})
         orientation: z.enum(ORIENTATIONS),
       }),
       layers: z.object({ top: layerSchema, heart: layerSchema, base: layerSchema }),
+      concentration: z.number().min(5).max(100)
+        .describe('香精（基）浓度：香精基占整瓶的百分比，5~100 的整数，自由填'),
       story: z.string().describe('这支香的气味说明书文案（≥20 字）'),
       mood_words: z.array(z.string()).max(6).optional().describe('3~6 个气质关键词'),
     },
   }, async (body) => {
     const errors = validateFormula(body);
-    if (errors.length)
+    if (errors.length) {
+      stats?.bump('submit_fail');
       return { content: [{ type: 'text', text: '配方未通过校验：\n- ' + errors.join('\n- ') }], isError: true };
+    }
 
     const id = allocId();
     const record = {
@@ -187,6 +196,7 @@ export function buildServer({ baseUrl = null, formulasDir = FORMULAS_DIR } = {})
 
     const file = path.join(formulasDir, `${id}.json`);
     fs.writeFileSync(file, JSON.stringify(record, null, 2));
+    stats?.bump('submit_ok'); // 真正调香成功一次
 
     if (baseUrl) {
       // 服务端只留 2KB 的档案，658KB 的 HTML 由 /f/<id> 现算
