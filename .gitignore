@@ -1,0 +1,15 @@
+node_modules/
+
+# 生成的档案与预览产物（npm run demo / preview 产生）
+formulas/*.json
+formulas/*.html
+!formulas/.gitkeep
+preview.html
+
+# 素材原图：体积大且可由 scripts/fetch-met.mjs 重新下载
+# 若想连原图一起发布，删掉下面这行即可
+web/assets/*.jpg
+
+*.log
+.DS_Store
+Thumbs.db

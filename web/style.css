@@ -1,0 +1,374 @@
+/* ============ 香遇手帐 · 白瓷淡粉 Cabinet en porcelaine ============ */
+/* 左页 = 初版原样；右页 = 2026-09-26 重做 */
+:root {
+  /* 纸张与底色（米白瓷质）*/
+  --bg: #f9f8f5;
+  --paper: #fcfbf9;
+  /* 结构线与点线 */
+  --hair: #ebdcd3;
+  --hair-strong: #c8b5a8;
+  --line-dotted: #d6c7bc;
+  /* 文字系统（拒绝死黑） */
+  --ink: #2b2625;
+  --ink-soft: #574d4a;
+  --ink-faint: #9c8e87;
+  /* 调香师干玫瑰主题色*/
+  --rose: #c99ea3;
+  --rose-deep: #a36b73;
+  --rose-num: #82585b;
+  --pink: #f6eaea;
+  --pink-deep: #e8d3d6;
+  /* 香调五行（低饱和、不浑浊）*/
+  --fam-floral: #b5838d;
+  --fam-woody: #9c7a69;
+  --fam-citrus: #c9a875;
+  --fam-resin: #b8977e;
+  --fam-spicy: #a86b67;
+  /* 氧化香槟金 / 玫瑰冷金（不是高光黄，避免土豪感）*/
+  --gold: #c4a67f;
+  --gold-deep: #9e7e56;
+  --gold-text: #967246;
+  --paper-border: #dcd1c2;
+  --serif: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --hand: 'Ma Shan Zheng', 'KaiTi', 'STKaiti', cursive;
+  --latin: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  --disp: 'Cinzel', 'Noto Serif SC', serif;
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
+  --cc: rgba(201,158,163,.55);
+  /* 书后底图那层纱的浓度：1 = 看不见图案，0 = 原图浓度 */
+  --bg-veil: .36;
+  /* 中心遮罩：决定图案从多远开始淡出。半径越大、图案越往四角缩；实心比例越大、淡出开始得越晚。
+     下面这组是在调参页上一档一档试出来的（2026-09-26） */
+  --bg-fade-r: 63%;
+  --bg-fade-solid: 56%;
+  --bg-size: 114% auto;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* 卡片缩到 80vw/80vh，字阶同步按比例收（14.5/16 ≈ 0.906，对应卡片 0.849 的缩放） */
+html { font-size: 14.5px; }
+body {
+  font-family: var(--serif); color: var(--ink); min-height: 100vh; overflow-x: hidden;
+  /* 书后面那圈底，四层背景（上面一层盖住下面一层）：
+     ① 中心遮罩：本色的径向渐变滚圆，中心不透明、四周透明 —— 图案只在书外那一圈显形，越靠近书越淡
+     ② 香调色调：跟着配方香调走的一层淡色，只调色不换图（--bg-tint，渲染器按香调注入）
+     ③ 纱：整层本色半透明，用来统一压淡图案浓度（1 = 看不见，0 = 原图浓度）
+     ④ 印花图案本身
+     半径(--bg-fade-r)与实心比例(--bg-fade-solid)决定「淡出从哪开始」，放大倍数由 --bg-size 控制 */
+  background-color: #ece8e1;
+  background-image:
+    radial-gradient(ellipse var(--bg-fade-r, 54%) var(--bg-fade-r, 54%) at 50% 50%,
+      rgba(236, 232, 225, 1) 0%,
+      rgba(236, 232, 225, 1) var(--bg-fade-solid, 72%),
+      rgba(236, 232, 225, 0) 100%),
+    linear-gradient(var(--bg-tint, transparent), var(--bg-tint, transparent)),
+    linear-gradient(rgba(236, 232, 225, var(--bg-veil, .62)), rgba(236, 232, 225, var(--bg-veil, .62))),
+    var(--bg-img, none);
+  background-size: auto, auto, auto, var(--bg-size, 125% auto);
+  background-position: center, center, center, var(--bg-pos, 50% 42%);
+  background-repeat: no-repeat;
+}
+/* 手机上按百分比宽度铺不满高度，退回 cover */
+@media (max-width: 1100px) {
+  html { --bg-size: cover; --bg-pos: center 42%; }
+}
+.view { min-height: 100vh; position: relative; }
+.hidden { display: none !important; }
+.paper { background: var(--paper); }
+
+/* ============ 双页手帐（桌面：一屏装下，卡片缩到视口 80%，四周留出展台） ============ */
+#spread { min-height: 100vh; display: grid; place-items: center; padding: 2vh 2vw; }
+.book {
+  display: grid; grid-template-columns: 1fr 1fr; width: min(1150px, 80vw);
+  height: min(715px, 80vh); min-height: 520px; position: relative;
+  background: var(--paper); border: 1px solid var(--paper-border); border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(60, 45, 35, .04),
+    0 12px 28px rgba(60, 45, 35, .08),
+    0 30px 60px rgba(60, 45, 35, .12),
+    inset 0 0 0 1px rgba(255, 255, 255, .8);
+  animation: openBook .8s cubic-bezier(.3,.8,.3,1) both;
+}
+@keyframes openBook { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+.book.closing { animation: closeBook .4s ease-in both; }
+@keyframes closeBook { to { transform: translateY(10px); opacity: 0; } }
+.gutter {
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 56px; transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(120, 90, 75, .06) 40%, rgba(120, 90, 75, .09) 50%, rgba(120, 90, 75, .06) 60%, transparent);
+  pointer-events: none; z-index: 6;
+}
+.page {
+  position: relative; padding: 1.9rem 2.5rem 1.3rem; overflow: hidden; height: 100%;
+  display: flex; flex-direction: column; background-color: var(--paper); background-image: var(--noise);
+}
+
+/* 单页古典金框 + 四角版画角花 */
+.page-frame {
+  position: absolute; inset: 12px; pointer-events: none; z-index: 4;
+  border: 1px solid var(--paper-border);
+  outline: 1px solid rgba(196, 166, 127, .4); outline-offset: -3px;
+}
+.pf-corner { position: absolute; width: 40px; height: 40px; color: var(--gold); opacity: .22; }
+.pf-corner.tl { top: -1px; left: -1px; }
+.pf-corner.tr { top: -1px; right: -1px; transform: scaleX(-1); }
+.pf-corner.bl { bottom: -1px; left: -1px; transform: scaleY(-1); }
+.pf-corner.br { bottom: -1px; right: -1px; transform: scale(-1, -1); }
+
+/* 植物雕版：极淡水印*/
+.botanical {
+  position: absolute; width: 300px; height: 300px; pointer-events: none;
+  background-size: contain; background-repeat: no-repeat; mix-blend-mode: multiply;
+  opacity: .14; filter: grayscale(.5) sepia(.18) contrast(.9);
+  -webkit-mask-image: radial-gradient(closest-side, #000 30%, transparent 72%);
+          mask-image: radial-gradient(closest-side, #000 30%, transparent 72%);
+}
+.botanical.tl { top: -40px; left: -48px; transform: rotate(3deg); }
+.botanical.tr { top: -30px; right: -54px; transform: rotate(-4deg); }
+
+/* 左页彩色底图（花园花卉石版）：垫在文字底下，向上铺到身份区，四周用径向渐变淡出。
+   走 multiply，图的白纸部分会自动消失，只透出花本身 */
+.garden {
+  position: absolute; left: -12%; right: -12%; top: 2%; bottom: 24%;
+  background-size: cover; background-position: center 42%; background-repeat: no-repeat;
+  opacity: .40; mix-blend-mode: multiply; pointer-events: none; z-index: 0;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 53% 44%, #000 0%, rgba(0, 0, 0, .5) 44%, transparent 80%);
+          mask-image: radial-gradient(ellipse 50% 50% at 53% 44%, #000 0%, rgba(0, 0, 0, .5) 44%, transparent 80%);
+}
+
+.page-head {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem;
+  padding-bottom: .7rem; border-bottom: 1px solid rgba(196, 166, 127, .5); position: relative; z-index: 3;
+}
+.page-head .ph-rule { width: 110px; color: var(--rose); opacity: .7; }
+.page-head.right { grid-template-columns: 1fr auto; }
+.page-head .ph-no { font-family: var(--disp); letter-spacing: .22em; color: var(--ink-soft); font-size: .8rem; }
+.page-head .ph-date { font-family: var(--disp); font-size: .74rem; color: var(--ink-faint); justify-self: end; }
+
+/* ---- 左页（初版原样） ---- */
+.left-grid {
+  flex: 1; min-height: 0; display: grid; grid-template-columns: auto 1fr;
+  grid-template-rows: minmax(0, 1fr) auto auto auto;
+  gap: 1rem 1.9rem; padding-top: 1.1rem; position: relative; z-index: 3;
+}
+/* 竖排标题：法式档案烫金标牌*/
+.cartouche {
+  grid-row: 1; position: relative; display: grid; place-items: center;
+  padding: 1.4rem 1.1rem; min-height: 0; align-self: stretch;
+  border: 1px solid var(--gold);
+  background: linear-gradient(to bottom, #fffdfa, #f8f4ee);
+  box-shadow:
+    inset 0 0 0 2px var(--paper), inset 0 0 0 3px var(--paper-border),
+    0 4px 10px rgba(0, 0, 0, .03);
+}
+.cartouche::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(196, 166, 127, .28); pointer-events: none; }
+.fn-title {
+  writing-mode: vertical-rl; text-orientation: upright; font-weight: 900;
+  font-size: clamp(1.45rem, 3.4vh, 2.05rem); letter-spacing: .3em; color: var(--ink); line-height: 1.7;
+}
+.fn-side { align-self: center; display: grid; gap: .7rem; }
+.stamps { display: flex; gap: .55rem; flex-wrap: wrap; }
+.stamp {
+  font-size: .74rem; letter-spacing: .2em; text-indent: .2em; color: var(--rose-deep);
+  border: 1px solid var(--rose); outline: 1px solid var(--pink-deep); outline-offset: 2px;
+  padding: .28rem .6rem; transform: rotate(var(--sr, 0deg)); background: rgba(245, 225, 227, .35);
+}
+.orient { font-family: var(--latin); font-size: 1.02rem; letter-spacing: .36em; color: var(--ink); }
+.parfumeur { font-family: var(--hand); font-size: 1.06rem; color: var(--ink-soft); }
+.anno { font-size: .84rem; line-height: 1.7; color: var(--ink-soft); }
+.anno-mood { font-size: .74rem; letter-spacing: .34em; color: var(--ink-soft); }
+.anno-underline { border-bottom: 1px solid rgba(196, 166, 127, .55); display: inline-block; padding-bottom: .3rem; }
+.question-copy {
+  grid-column: 1 / -1; font-size: .86rem; line-height: 1.85; color: var(--ink-soft);
+  padding: .8rem 1.1rem; background: rgba(245, 225, 227, .3); border-left: 2px solid var(--gold);
+}
+.question-copy b { color: var(--rose-deep); font-weight: 600; }
+.fam-block { grid-column: 1 / -1; }
+.fam-block h5 { font-size: .8rem; letter-spacing: .26em; font-weight: 600; margin-bottom: .3rem; }
+.fam-block h5 em { font-family: var(--latin); font-style: italic; font-weight: 400; letter-spacing: .06em; color: var(--ink-faint); margin-left: .7em; }
+/* 法式卷草小饰线（Wikimedia Commons 公有领域素材）*/
+.h4-orn { display: block; width: auto; height: 1.25rem; margin: 0 auto .35rem; color: var(--gold); opacity: .55; }
+.fam-bar { display: flex; height: 10px; border: 1px solid rgba(196, 166, 127, .5); background: var(--paper); }
+.fam-bar i { display: block; height: 100%; background: var(--c); border-right: 1px solid rgba(255,255,255,.7); }
+.fam-bar i:last-child { border-right: 0; }
+.fam-legend { display: flex; flex-wrap: wrap; gap: .35rem 1.2rem; margin-top: .55rem; font-size: .76rem; color: var(--ink-soft); }
+.fam-legend b { display: inline-block; width: .65em; height: .65em; border-radius: 50%; margin-right: .4em; background: var(--c); }
+.fam-legend span { display: inline-flex; align-items: center; }
+.left-grid > .anno-underline { grid-column: 1 / -1; align-self: end; }
+
+/* ---- 右页（重做版） ---- */
+.right-grid {
+  flex: 1; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto auto;
+  gap: 1.2rem; padding-top: 1.1rem; position: relative; z-index: 3;
+}
+/* 图表行吃满余量：金字塔铺高、配比环固定 240px 一列。
+   SVG 用绝对定位撑满各自的盒子 —— 否则 svg 会按 viewBox 比例自撑高，矮屏时冲出整行压到原料表上 */
+.pyr-wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr) 264px;
+  gap: 1.4rem; height: 100%; min-height: 0;
+}
+.pyr-box { position: relative; height: 100%; min-height: 0; }
+#sp-pyramid { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+#sp-pyramid .seg { stroke-width: .8; }
+#sp-pyramid .seg-hatch { pointer-events: none; }
+#sp-pyramid .tier-diamond { fill: var(--paper); stroke: url(#g-gold); stroke-width: .7; }
+#sp-pyramid text { font-family: var(--serif); fill: var(--ink); }
+/* 配比环：环在上、图例在下。图例把原来只藏在悬停提示里的「全瓶占比」补成看得见的 */
+.donut-wrap { position: relative; height: 100%; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: .5rem; }
+.donut-ring { position: relative; min-height: 0; }
+#sp-donut { position: absolute; inset: 0; width: 100%; height: 100%; }
+.donut-legend {
+  list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: .06rem .5rem;
+  font-size: .56rem; line-height: 1.35; color: var(--ink-soft);
+}
+.donut-legend li { display: flex; align-items: center; gap: .3rem; min-width: 0; }
+.donut-legend i { width: .46rem; height: .46rem; flex: none; background: var(--c); }
+.donut-legend span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.donut-legend b { margin-left: auto; font-family: var(--latin); font-weight: 600; color: var(--rose-num); }
+.donut-center {
+  position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: .2rem;
+}
+.donut-center span:first-child { font-family: var(--disp); font-size: .8125rem; letter-spacing: .125rem; color: var(--ink); }
+.donut-center span:last-child { font-family: var(--latin); font-size: .625rem; font-style: italic; letter-spacing: .0625rem; color: var(--ink-faint); }
+
+/* 原料表：手帐账册式「品名 ········· 百分比」，没有进度条。
+   三列靠缩进 10px 的竖线分成等高块 */
+.mat-table { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 1rem; }
+.mat-layer { position: relative; align-content: start; }
+.mat-layer:not(:first-child) { padding-left: .8rem; }
+.mat-layer:not(:first-child)::before {
+  content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 1px; background: rgba(196, 166, 127, .4);
+}
+.mat-layer h4 {
+  display: flex; justify-content: space-between; align-items: baseline; font-size: .8rem;
+  letter-spacing: .2em; font-weight: 600; border-bottom: 1px solid rgba(196, 166, 127, .5); padding-bottom: .3rem;
+}
+.mat-layer .lw { font-family: var(--disp); font-size: .6rem; letter-spacing: .12em; color: var(--ink-faint); font-weight: 400; }
+.mat-row {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: "name dots pct" "tag tag tag";
+  align-items: baseline; gap: .12rem .35rem; padding: .38rem 0 .42rem;
+  border-bottom: 1px dotted rgba(196, 166, 127, .5);
+}
+.mat-row:last-child { border-bottom: 0; }
+.mat-row .mname { grid-area: name; display: flex; align-items: center; gap: .2rem; font-size: .78rem; font-weight: 500; color: var(--ink); white-space: nowrap; }
+.mat-row .mi { width: .62rem; height: .62rem; flex: none; color: var(--gold-deep); opacity: .8; }
+.mat-row .dots { grid-area: dots; align-self: center; border-bottom: 1px dotted rgba(196, 166, 127, .55); transform: translateY(-.15em); }
+.mat-row .pct { grid-area: pct; font-family: var(--latin); font-size: .8125rem; font-weight: 600; color: var(--rose-num); }
+.mat-row .fam-tag { grid-area: tag; font-size: .59375rem; letter-spacing: .05em; color: var(--ink-faint); }
+
+/* 气味说明书：凹雕双线边框 + 顶部切断式拉丁文徽章 */
+.story { position: relative; border: 1px double var(--gold); padding: 1.15rem 1.5rem 1.05rem; background: #fdfbf7; }
+.story::before {
+  content: '❧ FORMULATION NOTES ❧'; position: absolute; top: -.45rem; left: 50%; transform: translateX(-50%);
+  background: var(--paper); padding: 0 .5rem; white-space: nowrap;
+  font-family: var(--disp); font-size: .5rem; letter-spacing: .15em; line-height: 1; color: var(--gold-text);
+}
+.story h3 { text-align: center; font-family: var(--disp); font-size: .6875rem; letter-spacing: .1875rem; text-indent: .1875rem; font-weight: 600; color: #3d3533; margin-bottom: .625rem; }
+.story p { font-size: .71875rem; line-height: 1.85; color: var(--ink-soft); text-align: justify; }
+.story p::first-letter {
+  font-family: var(--hand); font-size: 2rem; float: left; line-height: .9;
+  padding: .125rem .375rem 0 0; color: var(--gold-deep);
+}
+/* 首字烫金（中世纪手抄本插画体的意思，用金渐变贴着字走；不支持则退回上面的纯色）*/
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .story p::first-letter {
+    background: linear-gradient(155deg, #9e7e56 0%, #e8d8c3 42%, #967246 62%, #9e7e56 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+}
+.page-foot { text-align: center; color: var(--ink-faint); font-size: .66rem; letter-spacing: .34em; margin-top: .9rem; position: relative; z-index: 3; font-family: var(--disp); }
+
+/* 矮屏再收一档 */
+@media (min-width: 1101px) and (max-height: 820px) {
+  .page { padding: 1.35rem 2rem .9rem; }
+  .fn-side { gap: .5rem; }
+  .question-copy { font-size: .8rem; }
+  .story { padding: 1rem 1.3rem .9rem; }
+  .story p { font-size: .6875rem; line-height: 1.8; }
+  .mat-row { padding: .34rem 0 .38rem; }
+  .mat-row .mname { font-size: .78rem; }
+}
+
+/* ============ 手机端：单列、可滚动 ============ */
+@media (max-width: 1100px) {
+  /* 手机上书本是全宽，不该跟着桌面的小卡片一起缩 —— 字阶回到 17px，比桌面那档大 17% */
+  html { font-size: 17px; }
+  #spread { min-height: auto; padding: 3vh 4vw; }
+  .book { grid-template-columns: 1fr; width: 100%; height: auto; min-height: 0; }
+  .page { height: auto; min-height: auto; padding: 2.2rem 1.5rem 1.6rem; }
+  .gutter { display: none; }
+  /* 手机/窄屏：左右留白要够。原来 1.5rem 会让文字贴到金框上（框在 12px 处，只剩 13px） */
+  .page { padding: 2.2rem 2.3rem 1.7rem; }
+  .page-frame { inset: 9px; }
+  .botanical { width: 230px; height: 230px; opacity: .11; }
+  .botanical.tl { top: -30px; left: -40px; }
+  .botanical.tr { top: -24px; right: -44px; }
+
+  /* 左页：竖排标题保留，不要摊成一条横杠。
+     和桌面同一套结构（窄书脊 + 右边身份区），只是整体收小 */
+  .left-grid { grid-template-columns: auto minmax(0, 1fr); grid-template-rows: none; gap: 1.2rem 1.1rem; }
+  .cartouche { grid-row: auto; min-height: 0; align-self: start; padding: 1.1rem .75rem; }
+  .fn-title { writing-mode: vertical-rl; text-orientation: upright; font-size: 1.45rem; letter-spacing: .24em; line-height: 1.5; }
+  .fn-side { grid-column: 2; grid-row: 1; }
+  .question-copy { font-size: .98rem; }
+  .anno { font-size: .9rem; }
+  .fam-block h5 { font-size: .88rem; }
+  .fam-legend { font-size: .86rem; gap: .5rem 1.4rem; }
+
+  /* 右页：金字塔与配比环并排（不上下堆）。配比环按比例缩到窄窄一条，金字塔吃剩下的宽度 */
+  .right-grid { grid-template-rows: auto auto auto; gap: 1.5rem; }
+  .pyr-wrap { grid-template-columns: minmax(0, 1fr) minmax(112px, 33%); align-items: center; height: auto; gap: 1rem; }
+  .pyr-box { height: auto; }
+  #sp-pyramid { position: static; width: 100%; height: auto; }
+  .donut-wrap { height: auto; width: 100%; max-width: none; margin: 0; grid-template-rows: auto auto; }
+  .donut-ring { aspect-ratio: 1; }
+  #sp-donut { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .donut-legend { grid-template-columns: 1fr; font-size: .62rem; }
+  /* 手机上字号小的一律抬到能看的档位（原来 fam-tag 只有 8.6px、lw 只有 8.7px） */
+  .donut-center span:first-child { font-size: .95rem; }
+  .donut-center span:last-child { font-size: .78rem; }
+  .mat-table { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mat-layer:not(:first-child) { padding-left: 0; padding-top: 1.15rem; border-top: 1px solid var(--hair); }
+  .mat-layer:not(:first-child)::before { display: none; }
+  .mat-layer h4 { font-size: .88rem; }
+  .mat-layer .lw { font-size: .7rem; }
+  .mat-row .mname { font-size: .92rem; }
+  .mat-row .fam-tag { font-size: .76rem; }
+  .mat-row .pct { font-size: .88rem; }
+  .story h3 { font-size: .85rem; }
+  .story p { font-size: .94rem; line-height: 2; }
+  .page-foot { font-size: .72rem; }
+}
+/* 这个宽度区间书页还很宽（>700px），原料表别摊成一列，回到三列 */
+@media (min-width: 700px) and (max-width: 1100px) {
+  .mat-table { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 1rem; }
+  .mat-layer:not(:first-child) { padding-left: .8rem; padding-top: 0; border-top: 0; }
+  .mat-layer:not(:first-child)::before { display: block; }
+}
+@media (max-width: 560px) {
+  /* 窄屏再收，但左右仍有 1.45rem ≈ 24.7px，离金框(9px)有 15px 余量 */
+  .page { padding: 2rem 1.45rem 1.5rem; }
+  .page-head { grid-template-columns: 1fr auto; }
+  .page-head .ph-rule { display: none; }
+}
+/* 配比环在这个宽度以下只剩 ~120px，环内孔装不下两行中心字（实测 430 宽时孔仅 38px） */
+@media (max-width: 640px) {
+  .donut-center span:first-child { font-size: .82rem; }
+  .donut-center span:last-child { display: none; }
+}
+
+/* tooltip & toast */
+.tooltip {
+  position: fixed; z-index: 99; pointer-events: none; max-width: 290px;
+  background: var(--ink); color: #fdf7f4; font-size: .82rem; line-height: 1.7; letter-spacing: .04em;
+  padding: .6rem .9rem; opacity: 0; transform: translateY(6px); transition: opacity .18s, transform .18s;
+}
+.tooltip.show { opacity: .95; transform: none; }
+.tooltip b { color: var(--pink-deep); }
+#toast {
+  position: fixed; left: 50%; bottom: 2.4rem; transform: translate(-50%, 12px); z-index: 98;
+  background: var(--ink); color: #fdf7f4; font-size: .9rem; letter-spacing: .12em;
+  padding: .8rem 1.7rem; opacity: 0; transition: opacity .35s, transform .35s; pointer-events: none;
+}
+#toast.show { opacity: .95; transform: translate(-50%, 0); }
+

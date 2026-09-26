@@ -1,0 +1,1315 @@
+{
+  "generated_from": "pmt-source.txt",
+  "count": 187,
+  "materials": [
+    {
+      "id": "m001",
+      "name": "香柠檬精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 38
+    },
+    {
+      "id": "m002",
+      "name": "柠檬精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 42
+    },
+    {
+      "id": "m003",
+      "name": "绿柠檬精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 46
+    },
+    {
+      "id": "m004",
+      "name": "分红葡萄柚精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 50
+    },
+    {
+      "id": "m005",
+      "name": "来檬精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 54
+    },
+    {
+      "id": "m006",
+      "name": "绿橘精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 58
+    },
+    {
+      "id": "m007",
+      "name": "苦橘精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 62
+    },
+    {
+      "id": "m008",
+      "name": "甜橙精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 38
+    },
+    {
+      "id": "m009",
+      "name": "红橘精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 42
+    },
+    {
+      "id": "m010",
+      "name": "山鸡椒精油",
+      "family": "citrus",
+      "family_zh": "柑橘",
+      "hue": 46
+    },
+    {
+      "id": "m011",
+      "name": "橙叶精油 巴拉圭",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 93
+    },
+    {
+      "id": "m012",
+      "name": "香堇菜叶净油",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 97
+    },
+    {
+      "id": "m013",
+      "name": "格蓬精油",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 101
+    },
+    {
+      "id": "m014",
+      "name": "乳香黄连木精油",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 105
+    },
+    {
+      "id": "m015",
+      "name": "乳香黄连木净油",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 109
+    },
+    {
+      "id": "m016",
+      "name": "叶醇",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 113
+    },
+    {
+      "id": "m017",
+      "name": "女贞醛",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 117
+    },
+    {
+      "id": "m018",
+      "name": "黑醋栗香基345B",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 93
+    },
+    {
+      "id": "m019",
+      "name": "深竹 PX 190400",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 97
+    },
+    {
+      "id": "m020",
+      "name": "番茄叶 PX 190409",
+      "family": "green",
+      "family_zh": "青香",
+      "hue": 101
+    },
+    {
+      "id": "m021",
+      "name": "红茶 PX 190421",
+      "family": "tea",
+      "family_zh": "茶香",
+      "hue": 68
+    },
+    {
+      "id": "m022",
+      "name": "大红袍 PX 190387",
+      "family": "tea",
+      "family_zh": "茶香",
+      "hue": 72
+    },
+    {
+      "id": "m023",
+      "name": "二道绿茶 PX 1903883-4",
+      "family": "tea",
+      "family_zh": "茶香",
+      "hue": 76
+    },
+    {
+      "id": "m024",
+      "name": "凤凰单丛 PX 190385-1",
+      "family": "tea",
+      "family_zh": "茶香",
+      "hue": 80
+    },
+    {
+      "id": "m025",
+      "name": "普洱茶 PX 190422",
+      "family": "tea",
+      "family_zh": "茶香",
+      "hue": 84
+    },
+    {
+      "id": "m026",
+      "name": "明前龙井 PX 190458",
+      "family": "tea",
+      "family_zh": "茶香",
+      "hue": 88
+    },
+    {
+      "id": "m027",
+      "name": "薰衣草精油 保加利亚",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 118
+    },
+    {
+      "id": "m028",
+      "name": "薰衣草精油 普罗旺斯",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 122
+    },
+    {
+      "id": "m029",
+      "name": "地中海苦蒿精油 Armoise",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 126
+    },
+    {
+      "id": "m030",
+      "name": "胶冷杉精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 130
+    },
+    {
+      "id": "m031",
+      "name": "杜松子精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 134
+    },
+    {
+      "id": "m032",
+      "name": "芫荽籽精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 138
+    },
+    {
+      "id": "m033",
+      "name": "鼠尾草精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 142
+    },
+    {
+      "id": "m034",
+      "name": "鼠尾草精油 西班牙",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 118
+    },
+    {
+      "id": "m035",
+      "name": "迷迭香精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 122
+    },
+    {
+      "id": "m036",
+      "name": "香桃木精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 126
+    },
+    {
+      "id": "m037",
+      "name": "罗勒净油 Grand Vert",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 130
+    },
+    {
+      "id": "m038",
+      "name": "国香菊精油 罗马",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 134
+    },
+    {
+      "id": "m039",
+      "name": "母菊精油 德国",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 138
+    },
+    {
+      "id": "m040",
+      "name": "亚洲薄荷精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 142
+    },
+    {
+      "id": "m041",
+      "name": "丝柏精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 118
+    },
+    {
+      "id": "m042",
+      "name": "中亚苦蒿精油",
+      "family": "aromatic",
+      "family_zh": "芳香药草",
+      "hue": 122
+    },
+    {
+      "id": "m043",
+      "name": "胡萝卜籽精油",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 10
+    },
+    {
+      "id": "m044",
+      "name": "康酿克精油 白",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 14
+    },
+    {
+      "id": "m045",
+      "name": "万寿菊精油",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 18
+    },
+    {
+      "id": "m046",
+      "name": "印蒿精油",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 22
+    },
+    {
+      "id": "m047",
+      "name": "布枯叶精油",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 26
+    },
+    {
+      "id": "m048",
+      "name": "桃醛",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 30
+    },
+    {
+      "id": "m049",
+      "name": "椰子醛",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 34
+    },
+    {
+      "id": "m050",
+      "name": "雪梨 PX190420",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 10
+    },
+    {
+      "id": "m051",
+      "name": "百香果190443",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 14
+    },
+    {
+      "id": "m052",
+      "name": "番石榴190444",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 18
+    },
+    {
+      "id": "m053",
+      "name": "大黄PX190445",
+      "family": "fruity",
+      "family_zh": "果香",
+      "hue": 22
+    },
+    {
+      "id": "m054",
+      "name": "土耳其玫瑰净油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m055",
+      "name": "大马士革玫瑰精油 土耳其",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m056",
+      "name": "大马士革玫瑰精油 保加利亚",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m057",
+      "name": "波旁蔷薇 type ABS",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m058",
+      "name": "小花茉莉净油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m059",
+      "name": "蓝睡莲核心",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m060",
+      "name": "玫瑰淀 PX190448",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m061",
+      "name": "大花茉莉净油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m062",
+      "name": "银合欢净油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m063",
+      "name": "晚香玉essence 190427",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m064",
+      "name": "金银花 PX 190433",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m065",
+      "name": "栀子 extreme PX 190431",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m066",
+      "name": "黄花醇",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m067",
+      "name": "银合欢净油50%DPG",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m068",
+      "name": "露兜核心 PX 190452",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m069",
+      "name": "香豌豆 PX 190456",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m070",
+      "name": "二氢茉莉酮酸甲酯 高顺式",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m071",
+      "name": "橙花精油 摩洛哥",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m072",
+      "name": "鸢尾凝脂 15% lrone",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m073",
+      "name": "桂花净油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m074",
+      "name": "白兰花精油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m075",
+      "name": "玉兰 PX 190430",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m076",
+      "name": "白梅花 190453",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m077",
+      "name": "香柠檬叶精油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m078",
+      "name": "香叶天竺葵精油",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m079",
+      "name": "依兰精油 完全",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m080",
+      "name": "紫丁香 190428",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m081",
+      "name": "水杨酸叶醇酯",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m082",
+      "name": "乙位紫罗兰酮",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m083",
+      "name": "乙位突厥酮",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m084",
+      "name": "新洋茉莉醛",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m085",
+      "name": "鸢尾凝脂 重构 190422",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m086",
+      "name": "铃兰花 PX 190388",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m087",
+      "name": "水润铃兰 PX 190392",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m088",
+      "name": "易碎栀子 PX 190398-8",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m089",
+      "name": "漳州水仙 PX 190399-3",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m090",
+      "name": "易碎腊梅 PX 190401-2",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m091",
+      "name": "米仔兰 190435",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m092",
+      "name": "柚子花 PX 190404",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m093",
+      "name": "栀子 essence PX 190405-1",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m094",
+      "name": "冠群芳牡丹 PX 190407",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m095",
+      "name": "姜花 PX 190408",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m096",
+      "name": "橙花 essence PX 190403",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m097",
+      "name": "突尼斯橙花 PX 190447",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m098",
+      "name": "野玫瑰TOP PX 190414",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m099",
+      "name": "黑浮屠玫瑰 PX 190419",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m100",
+      "name": "玫瑰 essence PX 190416",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m101",
+      "name": "月季 PX 190417",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 340
+    },
+    {
+      "id": "m102",
+      "name": "茶月季 PX 190442",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 344
+    },
+    {
+      "id": "m103",
+      "name": "玫瑰TOP PX 190415",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 320
+    },
+    {
+      "id": "m104",
+      "name": "v甲基紫罗兰酮",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 324
+    },
+    {
+      "id": "m105",
+      "name": "梧桐花",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 328
+    },
+    {
+      "id": "m106",
+      "name": "香董精粹 190450",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 332
+    },
+    {
+      "id": "m107",
+      "name": "香堇花190455",
+      "family": "floral",
+      "family_zh": "花香",
+      "hue": 336
+    },
+    {
+      "id": "m108",
+      "name": "小豆蔻精油 危地马拉",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 356
+    },
+    {
+      "id": "m109",
+      "name": "榄香脂精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 0
+    },
+    {
+      "id": "m110",
+      "name": "粉红胡椒精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 4
+    },
+    {
+      "id": "m111",
+      "name": "新鲜姜精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 8
+    },
+    {
+      "id": "m112",
+      "name": "丁香叶精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 12
+    },
+    {
+      "id": "m113",
+      "name": "黑胡椒精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 16
+    },
+    {
+      "id": "m114",
+      "name": "丁香花蕾精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 20
+    },
+    {
+      "id": "m115",
+      "name": "肉桂精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 356
+    },
+    {
+      "id": "m116",
+      "name": "月桂叶精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 0
+    },
+    {
+      "id": "m117",
+      "name": "肉豆蔻精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 4
+    },
+    {
+      "id": "m118",
+      "name": "甜茴香精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 8
+    },
+    {
+      "id": "m119",
+      "name": "藏花茆",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 12
+    },
+    {
+      "id": "m120",
+      "name": "Timur花椒精油",
+      "family": "spicy",
+      "family_zh": "辛辣",
+      "hue": 16
+    },
+    {
+      "id": "m121",
+      "name": "橡苔净油Low ATRA",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 16
+    },
+    {
+      "id": "m122",
+      "name": "沉香精油 中国",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 20
+    },
+    {
+      "id": "m123",
+      "name": "沉香精油 越南野生",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 24
+    },
+    {
+      "id": "m124",
+      "name": "海妖龙涎香ABS 190434",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 28
+    },
+    {
+      "id": "m125",
+      "name": "广藿香精油 分子蒸馏",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 32
+    },
+    {
+      "id": "m126",
+      "name": "广藿香精油核心-65%藿香醇",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 36
+    },
+    {
+      "id": "m127",
+      "name": "降真香190437",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 40
+    },
+    {
+      "id": "m128",
+      "name": "橡木净油超临界",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 16
+    },
+    {
+      "id": "m129",
+      "name": "东印度檀香精油",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 20
+    },
+    {
+      "id": "m130",
+      "name": "香根精油 海地",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 24
+    },
+    {
+      "id": "m131",
+      "name": "香根精油 马达",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 28
+    },
+    {
+      "id": "m132",
+      "name": "顶级香根精油 马达",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 32
+    },
+    {
+      "id": "m133",
+      "name": "乙酸香根酯",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 36
+    },
+    {
+      "id": "m134",
+      "name": "左旋降龙涎醚",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 40
+    },
+    {
+      "id": "m135",
+      "name": "龙涎酮ISO E Super",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 16
+    },
+    {
+      "id": "m136",
+      "name": "乙酸愈创木酯",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 20
+    },
+    {
+      "id": "m137",
+      "name": "愈创木精油",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 24
+    },
+    {
+      "id": "m138",
+      "name": "雪松精油 阿特拉斯",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 28
+    },
+    {
+      "id": "m139",
+      "name": "雪松精油 弗吉尼亚",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 32
+    },
+    {
+      "id": "m140",
+      "name": "雪松精油 德克萨斯",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 36
+    },
+    {
+      "id": "m141",
+      "name": "古巴脂精油",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 40
+    },
+    {
+      "id": "m142",
+      "name": "沉香PX190384-1",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 16
+    },
+    {
+      "id": "m143",
+      "name": "莎草精油",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 20
+    },
+    {
+      "id": "m144",
+      "name": "Vertofix",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 24
+    },
+    {
+      "id": "m145",
+      "name": "甲基柏木醚",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 28
+    },
+    {
+      "id": "m146",
+      "name": "合成橡苔",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 32
+    },
+    {
+      "id": "m147",
+      "name": "檀香Mysore 190426",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 36
+    },
+    {
+      "id": "m148",
+      "name": "新喀里多尼亚檀香精油",
+      "family": "woody",
+      "family_zh": "木香",
+      "hue": 40
+    },
+    {
+      "id": "m149",
+      "name": "乳香精油",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 24
+    },
+    {
+      "id": "m150",
+      "name": "没药精油",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 28
+    },
+    {
+      "id": "m151",
+      "name": "岩蔷薇净油 浅色",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 32
+    },
+    {
+      "id": "m152",
+      "name": "红没药精油",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 36
+    },
+    {
+      "id": "m153",
+      "name": "暹罗安息香树脂50%DPG",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 40
+    },
+    {
+      "id": "m154",
+      "name": "香兰素",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 44
+    },
+    {
+      "id": "m155",
+      "name": "羯布罗香精油",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 48
+    },
+    {
+      "id": "m156",
+      "name": "天芥菜香基",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 24
+    },
+    {
+      "id": "m157",
+      "name": "赖百当净油",
+      "family": "resin",
+      "family_zh": "树脂/香草",
+      "hue": 28
+    },
+    {
+      "id": "m158",
+      "name": "苏合香净油",
+      "family": "leather",
+      "family_zh": "皮革",
+      "hue": 4
+    },
+    {
+      "id": "m159",
+      "name": "异丁基喹啉",
+      "family": "leather",
+      "family_zh": "皮革",
+      "hue": 8
+    },
+    {
+      "id": "m160",
+      "name": "新柔麂皮PX190413",
+      "family": "leather",
+      "family_zh": "皮革",
+      "hue": 12
+    },
+    {
+      "id": "m161",
+      "name": "干草净油蜡菊精油",
+      "family": "tobacco",
+      "family_zh": "烟草",
+      "hue": 30
+    },
+    {
+      "id": "m162",
+      "name": "快乐鼠尾草精油",
+      "family": "tobacco",
+      "family_zh": "烟草",
+      "hue": 34
+    },
+    {
+      "id": "m163",
+      "name": "香豆素",
+      "family": "tobacco",
+      "family_zh": "烟草",
+      "hue": 38
+    },
+    {
+      "id": "m164",
+      "name": "骑士龙涎PX190418",
+      "family": "tobacco",
+      "family_zh": "烟草",
+      "hue": 42
+    },
+    {
+      "id": "m165",
+      "name": "白色烟草190395",
+      "family": "tobacco",
+      "family_zh": "烟草",
+      "hue": 46
+    },
+    {
+      "id": "m166",
+      "name": "绿色烟草190394",
+      "family": "tobacco",
+      "family_zh": "烟草",
+      "hue": 50
+    },
+    {
+      "id": "m167",
+      "name": "甘松精油",
+      "family": "animalic",
+      "family_zh": "动物",
+      "hue": 14
+    },
+    {
+      "id": "m168",
+      "name": "缬草精油",
+      "family": "animalic",
+      "family_zh": "动物",
+      "hue": 18
+    },
+    {
+      "id": "m169",
+      "name": "麝香ABS RC 190423",
+      "family": "animalic",
+      "family_zh": "动物",
+      "hue": 22
+    },
+    {
+      "id": "m170",
+      "name": "大灵猫PX190446",
+      "family": "animalic",
+      "family_zh": "动物",
+      "hue": 26
+    },
+    {
+      "id": "m171",
+      "name": "左旋麝香酮99%",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 203
+    },
+    {
+      "id": "m172",
+      "name": "海菲麝香",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 207
+    },
+    {
+      "id": "m173",
+      "name": "黄葵内酯",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 211
+    },
+    {
+      "id": "m174",
+      "name": "环十五内酯（香水级)",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 215
+    },
+    {
+      "id": "m175",
+      "name": "环十五烯内酯",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 219
+    },
+    {
+      "id": "m176",
+      "name": "麝香T",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 223
+    },
+    {
+      "id": "m177",
+      "name": "开司米酮50%",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 227
+    },
+    {
+      "id": "m178",
+      "name": "麝香烯酮",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 203
+    },
+    {
+      "id": "m179",
+      "name": "黄葵净油",
+      "family": "musk",
+      "family_zh": "麝香",
+      "hue": 207
+    },
+    {
+      "id": "m180",
+      "name": "癸醛",
+      "family": "aldehydic",
+      "family_zh": "醛香",
+      "hue": 186
+    },
+    {
+      "id": "m181",
+      "name": "10-十─烯醛",
+      "family": "aldehydic",
+      "family_zh": "醛香",
+      "hue": 190
+    },
+    {
+      "id": "m182",
+      "name": "银醛",
+      "family": "aldehydic",
+      "family_zh": "醛香",
+      "hue": 194
+    },
+    {
+      "id": "m183",
+      "name": "卡龙（西瓜酮)",
+      "family": "marine",
+      "family_zh": "海洋",
+      "hue": 178
+    },
+    {
+      "id": "m184",
+      "name": "Cascalone",
+      "family": "marine",
+      "family_zh": "海洋",
+      "hue": 182
+    },
+    {
+      "id": "m185",
+      "name": "海风醛",
+      "family": "marine",
+      "family_zh": "海洋",
+      "hue": 186
+    },
+    {
+      "id": "m186",
+      "name": "白兰地PX190396-1",
+      "family": "boozy",
+      "family_zh": "酒香",
+      "hue": 0
+    },
+    {
+      "id": "m187",
+      "name": "黑松露PX190457",
+      "family": "gourmand",
+      "family_zh": "美食",
+      "hue": 26
+    }
+  ]
+}

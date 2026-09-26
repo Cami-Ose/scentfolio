@@ -1,0 +1,200 @@
+{
+  "plate-rose": {
+    "title": "‘Empress Josephine’ or Frankfort Rose (Rosa turbinata), from \"Les Roses\" by Claude-Antoine Thory",
+    "creator": "Pierre Joseph Redouté",
+    "date": "1817–24",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/762055",
+    "local": "assets/plate-rose.jpg",
+    "bytes": 2770374
+  },
+  "plate-jasmine": {
+    "title": "Jessamine (Jasminum Officinale), from the Flowers series for Old Judge Cigarettes",
+    "creator": "Goodwin & Company",
+    "date": "1890",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/400592",
+    "local": "assets/plate-jasmine.jpg",
+    "bytes": 1491213
+  },
+  "plate-iris": {
+    "title": "Iris (Iris Germanica), from the Flowers series for Old Judge Cigarettes",
+    "creator": "Goodwin & Company",
+    "date": "1890",
+    "source": "The Met",
+    "page": "https://www.metmuseum.org/art/collection/search/400593",
+    "local": "assets/plate-iris.jpg",
+    "bytes": 1618758
+  },
+  "plate-tobacco": {
+    "title": "Tobacco box",
+    "creator": "Unknown",
+    "date": "18th century",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/209415",
+    "local": "assets/plate-tobacco.jpg",
+    "bytes": 366858
+  },
+  "plate-tea": {
+    "title": "Tea Canister",
+    "creator": "Joseph Smith",
+    "date": "1769",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/8267",
+    "local": "assets/plate-tea.jpg",
+    "bytes": 889059
+  },
+  "bottle": {
+    "title": "Perfume Bottle",
+    "creator": "Tiffany & Co.",
+    "date": "ca. 1893",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/5594",
+    "local": "assets/bottle.jpg",
+    "bytes": 230024
+  },
+  "ornament-exlibris": {
+    "title": "The union of architecture, sculpture, and painting; exemplified by a series of illustrations, with descriptive accounts of the house and galleries of John Soane ... / by John Britton",
+    "creator": "John Britton",
+    "date": "1827",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/839174",
+    "local": "assets/ornament-exlibris.jpg",
+    "bytes": 4206235
+  },
+  "florilegium": {
+    "title": "Study of Capers, Gorse, and a Beetle",
+    "creator": "Maria Sibylla Merian",
+    "date": "1693",
+    "source": "The Metropolitan Museum of Art",
+    "page": "https://www.metmuseum.org/art/collection/search/399922",
+    "local": "assets/florilegium.jpg",
+    "bytes": 1583447
+  },
+  "plate-crown": {
+    "title": "Crown Imperial (Fritillaria imperialis), from \"Les Liliacées\"",
+    "creator": "Pierre Joseph Redouté",
+    "date": "1802–16",
+    "source": "The Met",
+    "page": "https://www.metmuseum.org/art/collection/search/762064",
+    "local": "assets/plate-crown.jpg",
+    "bytes": 2120429
+  },
+  "orn-court-1": {
+    "title": "Ornament Designs Invented by J. Berain",
+    "creator": "Jean Berain",
+    "date": "1711 or after",
+    "source": "The Met",
+    "page": "https://www.metmuseum.org/art/collection/search/345898",
+    "local": "assets/orn-court-1.jpg",
+    "bytes": 3448572,
+    "used_for": "berain-ceiling"
+  },
+  "orn-court-3": {
+    "title": "Plate, page 71 from \"Ornament Designs Invented by J. Berain\"",
+    "creator": "Jean Berain",
+    "date": "late 17th–early 18th century",
+    "source": "The Met",
+    "page": "https://www.metmuseum.org/art/collection/search/704827",
+    "local": "assets/orn-court-3.jpg",
+    "bytes": 3364667
+  },
+  "orn-court-5": {
+    "title": "Cartouche",
+    "creator": "Robert William Hume",
+    "date": "1830–1904",
+    "source": "The Met",
+    "page": "https://www.metmuseum.org/art/collection/search/391734",
+    "local": "assets/orn-court-5.jpg",
+    "bytes": 1690213
+  },
+  "orn-court-6": {
+    "title": "Design for a Ceiling Decoration",
+    "creator": "Giocondo (Giuseppe) Albertolli",
+    "date": "1742–1839",
+    "source": "The Met",
+    "page": "https://www.metmuseum.org/art/collection/search/341912",
+    "local": "assets/orn-court-6.jpg",
+    "bytes": 1791390
+  },
+  "orn-corner": {
+    "title": "Corner Ornament Black Up Left",
+    "creator": "unknown",
+    "date": "—",
+    "source": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Corner_Ornament_Black_Up_Left.svg",
+    "local": "assets/orn/corner.svg",
+    "note": "页框四角花饰；转角用 CSS scaleX/scaleY 镜像出另外三个角。渲染器只取 <path> 的 d，填色改 currentColor"
+  },
+  "orn-flourish": {
+    "title": "Flourish-1348158",
+    "creator": "unknown",
+    "date": "—",
+    "source": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Flourish-1348158.svg",
+    "local": "assets/orn/flourish.svg",
+    "note": "栏目标题下的法式卷草饰线（左右页共用）"
+  },
+  "garden-flower": {
+    "title": "The American Flora, Vol. 1 — pl. 01 Rosa centifolia",
+    "creator": "Asa B. Strong",
+    "date": "1855",
+    "source": "Wikimedia Commons (Biodiversity Heritage Library scan)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_American_Flora._Vol._1,_1855_-_pl._01_Rosa_centifolia_(6022323888).jpg",
+    "local": "assets/garden/flower.jpg",
+    "note": "左页底图·「花」桶（花香调 / 无）。原图 1858×2695 → 760 宽 / JPEG q78 / 89KB，渲染器内嵌 base64"
+  },
+  "garden-citrus": {
+    "title": "The American Flora, Vol. 1 — pl. 11 Citrus × aurantium",
+    "creator": "Asa B. Strong",
+    "date": "1855",
+    "source": "Wikimedia Commons (Biodiversity Heritage Library scan)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_American_Flora._Vol._1,_1855_-_pl._11_Citrus_%C3%97_aurantium_(6022327482).jpg",
+    "local": "assets/garden/citrus.jpg",
+    "note": "左页底图·「果」桶（果香调 / 柑橘调 / 美食调）"
+  },
+  "garden-woody": {
+    "title": "The American Flora, Vol. 1 — pl. 40 Quercus robur",
+    "creator": "Asa B. Strong",
+    "date": "1855",
+    "source": "Wikimedia Commons (Biodiversity Heritage Library scan)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_American_Flora._Vol._1,_1855_-_pl._40_Quercus_robur_(6021783777).jpg",
+    "local": "assets/garden/woody.jpg",
+    "note": "左页底图·「木」桶（木质调 / 东方调 / 西普调 / 皮革调）"
+  },
+  "garden-herbal": {
+    "title": "The American Flora, Vol. 1 — pl. 41 Iris florentina, Chamaemelum nobile",
+    "creator": "Asa B. Strong",
+    "date": "1855",
+    "source": "Wikimedia Commons (Biodiversity Heritage Library scan)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_American_Flora._Vol._1,_1855_-_pl._41_Iris_florentina,_Chamaemelum_nobile_(6021784135).jpg",
+    "local": "assets/garden/herbal.jpg",
+    "note": "左页底图·「草」桶（芳草调 / 绿叶调 / 茶香调 / 馥奇调 / 水生调）"
+  },
+  "garden-spicy": {
+    "title": "The American Flora, Vol. 1 — pl. 27 Gentiana purpurea, Myristica fragrans",
+    "creator": "Asa B. Strong",
+    "date": "1855",
+    "source": "Wikimedia Commons (Biodiversity Heritage Library scan)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:The_American_Flora._Vol._1,_1855_-_pl._27_Gentiana_purpurea,_Myristica_fragrans_(6022334536).jpg",
+    "local": "assets/garden/spicy.jpg",
+    "note": "左页底图·「辛」桶（辛辣调 / 动物调）"
+  },
+  "bg-morris-sample": {
+    "title": "Wallpaper Sample Book 1 — William Morris and Company, page 014",
+    "creator": "Morris & Company",
+    "date": "19th century",
+    "source": "Brooklyn Museum via Wikimedia Commons",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Wallpaper_Sample_Book_1_-_William_Morris_and_Company_-_page014.jpg",
+    "local": "assets/bg/morris-sample.jpg",
+    "note": "书后面那圈底图（印花图案）。原图只有 592×768，q72 重存 108KB。渲染器通过 CSS 变量 --bg-img 注入，浓度由 --bg-veil 控制（1=看不见，0=原图浓）"
+  }
+}

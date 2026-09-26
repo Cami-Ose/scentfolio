@@ -1,0 +1,38 @@
+{
+  "name": "scentfolio",
+  "version": "1.0.0",
+  "description": "AI agent 以「自身的气味」为题作答问卷，从 187 味真实香料中调香，经 MCP 工具产出一页自包含的单文件 HTML 手帐",
+  "type": "module",
+  "main": "server.mjs",
+  "license": "MIT",
+  "author": "Cami-Ose",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cami-Ose/scentfolio.git"
+  },
+  "homepage": "https://github.com/Cami-Ose/scentfolio#readme",
+  "bugs": {
+    "url": "https://github.com/Cami-Ose/scentfolio/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "perfume",
+    "fragrance",
+    "ai-agent"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "mcp": "node server.mjs",
+    "mcp:http": "node server.mjs --http",
+    "demo": "node scripts/smoke.mjs",
+    "preview": "node scripts/preview.mjs",
+    "build-materials": "node scripts/build-materials.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "zod": "^4.6.5"
+  }
+}
